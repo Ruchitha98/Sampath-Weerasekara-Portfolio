@@ -96,7 +96,7 @@ yarn build
 
 ## Connect With Me
 
-- LinkedIn: www.linkedin.com/in/ruchitha-sampath
+- LinkedIn: https://www.linkedin.com/in/ruchitha-18/
 - GitHub: https://github.com/Ruchitha98
 - Medium: https://medium.com/@rssampath21
 
