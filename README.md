@@ -1,74 +1,111 @@
-# NexTemp | A Next.js Personal Web App
+# Sampath Weerasekara | Portfolio Website
 
-![NexTemp - A Next.js Personal Web App](https://github.com/lilxyzz/nextemp/blob/main/public/NexTemp-cover.png)
+![Portfolio Preview](./public/home.png)
 
-NexTemp - A bespoke **template** for your **next** web project. NexTemp is a personal portfolio and blog theme built around Next.js. It features a modern, clean, and responsive design, perfect for developers or anyone looking to showcase their work and ideas. For more themes and updates, stay tuned.
+A modern personal portfolio website built with Next.js, showcasing my experience, projects, research, and technical articles in Software Engineering, Artificial Intelligence, and Data Science.
 
-## 📚 Tech Stack
-Next.js 14+
-React 18+
-Tailwind CSS 3+
-Framer Motion 11+
+---
 
-## ✨ Features
-- Dark and light color mode 
-- Reusable Components
-- Blog post creation
-- Animations with Framer Motion
-- Tailwind CSS integration
-- Mobile-first responsive layout
-- Sitemap support
-- 95+ Lighthouse
+## About
 
-## 🚀 NexTemp Pro Coming Soon
-**Features**
-- SEO optimised 
-- Post tags and categories
-- Integration with Hashnode CMS for easy post publishing
-- PWA support
-  
+I am a **Software Engineer and AI Developer** with experience building backend systems, web applications, machine learning solutions, and data-driven applications.
 
-### 🛠️ Requirements
+This portfolio serves as a central hub for my professional work, featuring software projects, AI research, technical writing, and career experience.
 
-- Node 18+
-  - https://nodejs.org/en
-- Yarn
-  - https://classic.yarnpkg.com/en/docs/getting-started
+---
 
+## Features
 
+- Modern responsive design
+- Dark mode interface
+- Professional project showcase
+- Technical articles and publications
+- Interactive experience timeline
+- Skills and technology overview
+- Contact form integration
+- Smooth animations with Framer Motion
+- Mobile-first design
+- Optimized performance
 
-## 🎬 Getting Started
+---
 
-1. Clone the repository:
-    ```bash
-    git clone https://github.com/lilxyzz/nextemp.git
-    ```
+## Tech Stack
 
-2. Navigate into the repository:
-    ```bash
-    cd NexTemp
-    ```
+### Frontend
 
-3. Install the dependencies:
-    ```bash
-    yarn
-    ```
+- Next.js
+- React
+- Tailwind CSS
+- Framer Motion
 
-4. Run the development server:
-    ```bash
-    yarn dev
-    ```
-5. Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### Development Tools
 
+- Git
+- GitHub
+- Vercel
 
-#### 🙏 Thanks
-If you like this theme, don't forget to give it a ⭐.
+---
 
-#### 🤝 Contributing
-Got enhancements you envision? Contributions are welcome! Fork the repo, push your changes, and submit a pull request. Let's make this theme better, together.
+## Featured Projects
 
-#### 👾 Issues
-For any challenges encountered, please feel free to report issues through our issue tracker.
+### WMFT AI Assessment System
 
-#### 📝 License
-This project is open source and available under the MIT License.
+Research project focused on automating Wolf Motor Function Test task detection and scoring using Vision Language Models (Qwen-VL) for stroke rehabilitation assessment.
+
+### House Price Prediction
+
+Machine learning application for predicting residential property prices using data preprocessing, feature engineering, and regression models.
+
+### Customer Churn Prediction
+
+Predictive analytics project for identifying customers at risk of leaving using machine learning classification techniques.
+
+### Data Job Market Analytics
+
+Interactive analytics dashboard exploring global trends, salaries, technologies, and opportunities within the data industry.
+
+---
+
+## Getting Started
+
+### Clone the repository
+
+```bash
+git clone https://github.com/Ruchitha98/Sampath-Weerasekara-Portfolio.git
+```
+
+### Install dependencies
+
+```bash
+yarn install
+```
+
+### Run development server
+
+```bash
+yarn dev
+```
+
+### Build for production
+
+```bash
+yarn build
+```
+
+---
+
+## Connect With Me
+
+- LinkedIn: www.linkedin.com/in/ruchitha-sampath
+- GitHub: https://github.com/Ruchitha98
+- Medium: https://medium.com/@rssampath21
+
+---
+
+## License
+
+This project is licensed under the MIT License.
+
+---
+
+Built and maintained by **Sampath Weerasekara**.
