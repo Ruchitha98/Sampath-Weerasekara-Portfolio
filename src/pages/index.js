@@ -22,8 +22,8 @@ export default function Home() {
 
       <article className="flex min-h-screen items-center text-dark dark:text-light sm:items-start">
         <Layout className="!pt-24 md:!pt-16 sm:!pt-28">
-          <div className="flex w-full items-start justify-between pt-10 pb-24 md:flex-col">
-            <div className="w-1/2 justify-center lg:hidden md:flex">
+          <div className="flex w-full items-start justify-between pt-10 pb-24 md:flex-col md:items-center">
+            <div className="w-1/2 justify-center lg:hidden md:flex md:w-full md:justify-center">
               <Image
                 priority
                 src={profilePic}

@@ -34,7 +34,7 @@ const CustomMobileLink = ({ href, title, className = "", toggle }) => {
   return (
     <button
       type="button"
-      className={`${className} relative rounded text-light transition-colors duration-300 hover:text-primaryDark dark:text-dark`}
+      className={`${className} relative rounded text-light transition-colors duration-300 hover:text-primary`}
       onClick={handleClick}
     >
       {title}
@@ -144,7 +144,7 @@ const Navbar = () => {
       {isOpen && (
         <motion.div
           id="mobile-menu"
-          className="fixed left-1/2 top-1/2 z-40 flex h-[75vh] min-w-[70vw] -translate-x-1/2 -translate-y-1/2 flex-col items-center justify-between rounded-3xl border border-white/10 bg-[#111111]/95 px-8 py-20 shadow-2xl backdrop-blur-md dark:bg-light/95 sm:min-w-[90vw]"
+          className="fixed left-1/2 top-1/2 z-40 flex h-[75vh] min-w-[70vw] -translate-x-1/2 -translate-y-1/2 flex-col items-center justify-between rounded-3xl border border-primary/20 bg-[#0a0a0a]/95 px-8 py-20 shadow-2xl backdrop-blur-md sm:min-w-[90vw]"
           initial={{ scale: 0, x: "-50%", y: "-50%", opacity: 0 }}
           animate={{ scale: 1, opacity: 1 }}
           transition={{ duration: 0.25 }}
@@ -171,15 +171,12 @@ const Navbar = () => {
             </SocialIcon>
 
             <SocialIcon
-              href="https://www.linkedin.com/in/YOUR-LINKEDIN"
+              href="https://www.linkedin.com/in/ruchitha-18/"
               label="LinkedIn profile"
             >
               <LinkedInIcon />
             </SocialIcon>
 
-            <SocialIcon href="https://medium.com/@rssampath21" label="Medium profile">
-              <MediumIcon />
-            </SocialIcon>
           </nav>
         </motion.div>
       )}

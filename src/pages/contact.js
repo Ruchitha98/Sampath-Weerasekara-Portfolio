@@ -14,23 +14,25 @@ export default function Contact() {
     message: "",
   });
 
+  const [isSubmitting, setIsSubmitting] = useState(false);
+
+  const FORMSPREE_ENDPOINT = "https://formspree.io/f/xgobpgzp";
+
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-
-    const myForm = e.target;
-    const formData = new FormData(myForm);
+    setIsSubmitting(true);
 
     try {
-      const response = await fetch("/", {
+      const response = await fetch(FORMSPREE_ENDPOINT, {
         method: "POST",
         headers: {
-          "Content-Type": "application/x-www-form-urlencoded",
+          Accept: "application/json",
         },
-        body: new URLSearchParams(formData).toString(),
+        body: new FormData(e.target),
       });
 
       if (response.ok) {
@@ -40,13 +42,15 @@ export default function Contact() {
       }
     } catch (error) {
       alert("Something went wrong. Please try again.");
+    } finally {
+      setIsSubmitting(false);
     }
   };
 
   return (
     <>
       <Head>
-        <title>Contact | Sampath Weerasekara </title>
+        <title>Contact | Sampath Weerasekara</title>
         <meta
           name="description"
           content="Contact Sampath Weerasekara for software engineering, AI, data science, and machine learning opportunities."
@@ -62,7 +66,7 @@ export default function Contact() {
             className="mb-16 !text-8xl !leading-tight lg:!text-7xl sm:!text-6xl xs:!text-4xl sm:mb-8"
           />
 
-          <section className="grid w-full grid-cols-12 gap-10 rounded-3xl border border-white/10 bg-[#111111] p-10 shadow-xl lg:p-8 xs:p-4">
+<section className="grid w-full max-w-full grid-cols-12 gap-10 overflow-hidden rounded-3xl border border-white/10 bg-[#111111] p-10 shadow-xl lg:p-8 md:gap-6 xs:p-4">
             <div className="col-span-5 flex flex-col justify-center md:col-span-12">
               <span className="text-lg font-semibold text-primary dark:text-primaryDark">
                 Contact
@@ -79,30 +83,17 @@ export default function Contact() {
               </p>
 
               <div className="mt-8 rounded-2xl border border-primary/20 bg-primary/10 p-5">
-  <p className="text-sm font-medium text-primary dark:text-primaryDark">
-    I usually respond within 24 hours.
-  </p>
-</div>
+                <p className="text-sm font-medium text-primary dark:text-primaryDark">
+                  I usually respond within 24 hours.
+                </p>
+              </div>
             </div>
 
             <div className="col-span-7 md:col-span-12">
-              <form
-                name="contact-form"
-                method="POST"
-                data-netlify="true"
-                netlify-honeypot="bot-field"
-                onSubmit={handleSubmit}
-                className="rounded-3xl border border-white/10 bg-white/5 p-6 xs:p-4"
-              >
-                <input type="hidden" name="form-name" value="contact-form" />
-
-                <p className="hidden">
-                  <label>
-                    Do not fill this out:
-                    <input name="bot-field" onChange={handleChange} />
-                  </label>
-                </p>
-
+            <form
+  onSubmit={handleSubmit}
+  className="w-full max-w-full rounded-3xl border border-white/10 bg-white/5 p-6 xs:p-4"
+>
                 <div className="mb-5">
                   <label className="block text-sm font-semibold text-light/70">
                     Your Name
@@ -112,7 +103,7 @@ export default function Contact() {
                     name="name"
                     required
                     autoComplete="name"
-                    className="mt-2 w-full rounded-xl border border-white/10 bg-[#0b0b0b] px-4 py-3 text-light outline-none transition-all duration-300 placeholder:text-light/30 focus:border-primary"
+                    className="box-border mt-2 w-full rounded-xl border border-white/10 bg-[#0b0b0b] px-4 py-3 text-light outline-none transition-all duration-300 placeholder:text-light/30 focus:border-primary"
                     placeholder="Enter your name"
                     onChange={handleChange}
                   />
@@ -127,7 +118,7 @@ export default function Contact() {
                     name="email"
                     required
                     autoComplete="email"
-                    className="mt-2 w-full rounded-xl border border-white/10 bg-[#0b0b0b] px-4 py-3 text-light outline-none transition-all duration-300 placeholder:text-light/30 focus:border-primary"
+                    className="box-border mt-2 w-full rounded-xl border border-white/10 bg-[#0b0b0b] px-4 py-3 text-light outline-none transition-all duration-300 placeholder:text-light/30 focus:border-primary"
                     placeholder="Enter your email"
                     onChange={handleChange}
                   />
@@ -145,7 +136,7 @@ export default function Contact() {
                     id="message"
                     required
                     rows="6"
-                    className="mt-2 w-full resize-none rounded-xl border border-white/10 bg-[#0b0b0b] px-4 py-3 text-light outline-none transition-all duration-300 placeholder:text-light/30 focus:border-primary"
+                   className="box-border mt-2 w-full rounded-xl border border-white/10 bg-[#0b0b0b] px-4 py-3 text-light outline-none transition-all duration-300 placeholder:text-light/30 focus:border-primary"
                     placeholder="Write your message..."
                     onChange={handleChange}
                   />
@@ -154,9 +145,10 @@ export default function Contact() {
                 <div className="flex w-full justify-end">
                   <button
                     type="submit"
-                    className="rounded-xl bg-white px-6 py-3 text-base font-semibold text-black transition-all duration-300 hover:scale-105 hover:bg-gray-200"
+                    disabled={isSubmitting}
+                    className="rounded-xl bg-white px-6 py-3 text-base font-semibold text-black transition-all duration-300 hover:scale-105 hover:bg-gray-200 disabled:cursor-not-allowed disabled:opacity-60"
                   >
-                    Send Message
+                    {isSubmitting ? "Sending..." : "Send Message"}
                   </button>
                 </div>
               </form>
