@@ -5,6 +5,7 @@ import { AnimatePresence } from "framer-motion";
 import { Montserrat } from "next/font/google";
 import Head from "next/head";
 import { useRouter } from "next/router";
+import { Analytics } from "@vercel/analytics/next";
 
 const montserrat = Montserrat({ subsets: ["latin"], variable: "--font-mont" });
 
@@ -30,6 +31,7 @@ export default function App({ Component, pageProps }) {
         </AnimatePresence>
         <Footer />
       </main>
+      <Analytics />
     </>
   );
 }
